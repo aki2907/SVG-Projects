@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Name</title>
+</head>
+<body>
+		<!-- M − moveto − move from one point to another point.
+			M x y
+		L − lineto − create a line.
+			L x y
+		H − horizontal lineto − create a horizontal line.
+			H (or h) x
+		V − vertical lineto − create a vertical line.
+			V (or v) y
+		C − curveto − create a curve.
+			C (or c) x1 y1 x2 y2 x y
+		S − smooth curveto − create a smooth curve.
+			S (or s) x2 y2 x y
+		Q − quadratic Bezier curve − create a quadratic Bezier curve.
+			Q (or q) x1 y1 x y
+		T − smooth quadratic Bezier curveto − create a smooth quadratic Bezier curve.
+			T (or t) x y
+		A − elliptical Arc − create a elliptical arc.
+			A rx ry  x-axis-rotation  large-arc-flag  sweep-flag  x y
+			a rx ry  x-axis-rotation  large-arc-flag  sweep-flag cpx + x cpy + y
+		Z − closepath − close the path.
+
+		NOTE: 	x,y is the end point for the curve/arc
+				x1,y1 is the control point at beginning of curve
+				x2,y2 is the control point at end of curve
+				rx is the x-radius of the ellipse
+				ry is the y-radius of the ellipse
+				x-axis-rotation is the degrees to rotate the x-axis -->
+
+	<svg width="1300" height="800" viewBox="0 0 1300 800">
+		<rect x="50" y="10" width="1200" height="500" fill="yellow" stroke="black" stroke-width="3"/>
+		<g stroke="blue" stroke-width="2">
+			<path d="M 150 50 L 100 200 s 5 40 30 0 L 150 150 L 180 150 L 200 200 s 25 40 30 0 L 180 50 q -15 -40 -30 0 Z" fill="red" /> <!-- A -->
+			<circle cx="165" cy="100" r="15" fill="yellow"/> <!-- A Holes -->
+
+			<path d="M 250 50 L 250 200 s 10 40 30 0 L 280 140 L 320 200 s 30 40 30 0 L 300 120 L 350 50 s 5 -40 -30 0 L 280 100 L 280 50 s -10 -40 -30 0 Z" fill="green" /> <!-- K -->
+
+			<path d="M 410 50 L 360 200 s 5 40 30 0 L 410 150 L 440 150 L 460 200 s 25 40 30 0 L 440 50 q -15 -40 -30 0 Z" fill="pink" /> <!-- A -->
+			<circle cx="425" cy="100" r="15" fill="yellow"/> <!-- A Holes -->
+
+			<path d="M 510 50 L 510 200 s 10 40 30 0 L 540 100 L 610 200 s 30 40 30 0 L 640 50 s -10 -40 -30 0 L 610 150 L 540 50 s -30 -40 -30 0 Z" fill="#ccffff" /> <!-- N -->
+
+			<path d="M 660 50 L 660 200 s 10 40 30 0 L 690 150 L 730 200 s 30 40 30 0 L 710 130 L 760 50 s 5 -40 -30 0 L 690 110 L 690 50 s -10 -40 -30 0 Z" fill="#b36b00" /> <!-- K -->
+
+			<path d="M 830 30 a 45 45 0 0 0 0 100 a 25 25 0 1 1 0 60 s -40 15 0 25 a 45 45 0 0 0 0 -110 a 15 15 0 0 1 0 -50 s 40 -15 0 -25 Z" fill="#cc0099" /> <!-- S -->
+
+			<path d="M 900 50 v 150 s 10 40 30 0 v -60 h 50 v 60 s 10 40 30 0 v -150 s -10 -40 -30 0 v 60 h -50 v -60 s -10 -40 -30 0 Z" fill="#006699" /> <!-- H -->
+
+			<path d="M 1100 50 L 1050 200 s 5 40 30 0 L 1100 150 L 1130 150 L 1150 200 s 25 40 30 0 L 1130 50 q -15 -40 -30 0 Z" fill="#9900ff" /> <!-- A -->
+			<circle cx="1115" cy="100" r="15" fill="yellow"/> <!-- A Holes -->
+			
+			<path d="M 300 250 a 60 50 0 1 1 0 200 s -40 -10 0 -30 v -140 s -40 -10 0 -30 Z" fill="#004d4d" /> <!-- D -->
+			<path d="M 325 285 a 45 45 0 1 1 0 130 Z" fill="yellow" /> <!-- D Holes -->
+
+			<path d="M 450 280 v 130 s 50 70 140 0 v -130 s -10 -40 -30 0 v 110 s -40 40 -80 0 v -110 s -10 -40 -30 0 Z" fill="#cc99ff" /> <!-- U -->
+
+			<path d="M 620 250 v 200 s 130 -10 20 -100 v -1 s 100 -80 -20 -100 Z" fill="#ff6699" /> <!-- B -->
+			<circle cx="645" cy="300" r="15" fill="yellow"/> <!-- B Holes -->
+			<circle cx="645" cy="400" r="15" fill="yellow"/> <!-- B Holes -->
+
+			<path d="M 820 250 h -60 s -30 5 -60 50 v 100 s 20 45 60 50 h 60 s 40 -10 0 -30 h -50 s -40 5 -40 -30 v -20 h 55 s 40 -10 0 -30 h -55 v -20 s -5 -30 30 -40 h 60 s 40 -10 0 -30 Z" fill="#99ff33" /> <!-- E -->
+			
+			<path d="M 850 270 l 50 70 v 80 s 10 40 30 0 v -80 l 50 -70 s 5 -30 -30 0 l -35 45 l -35 -45 s -30 -30 -30 0 Z" fill="#862d2d" /> <!-- Y -->
+		</g>
+	</svg>
+
+</body>
+</html>
